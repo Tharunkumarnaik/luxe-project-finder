@@ -168,7 +168,7 @@
 .site-header { background: var(--background); position: sticky; top:0; z-index:40; box-shadow:var(--shadow-header); }
 .header-inner { height:100px; width:calc(100% - 88px); margin:auto; display:grid; grid-template-columns:auto minmax(0,1fr) auto; align-items:center; gap:35px; }
 .brand { display:flex; align-items:center; gap:9px; flex-shrink:0; }
-.logo-symbol { width:43px; height:47px; position:relative; display:block; overflow:hidden; }
+.logo-symbol { width:43px; height:35px; position:relative; display:block; overflow:hidden; }
 .logo-symbol img { position:absolute; width:165px; max-width:none; height:165px; top:-49px; left:-61px; object-fit:contain; }
 .brand-type { font-family:var(--font-display); font-size:19px; line-height:1.25; color:var(--foreground); }
 .brand-type > span { display:block; font-family:var(--font-sans); font-size:9px; letter-spacing:.33em; margin-top:4px; }

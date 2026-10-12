@@ -4,5 +4,6 @@
 - [x] Implement style preferences, gallery filters/lightbox and FAQ.
 - [x] Implement validated enquiries and questionnaire with honest submission state.
 - [x] Verify navigation, enquiry flow, mobile layout and tests.
+- [ ] Add and verify smooth page entrances, scroll reveals and refined interaction transitions with reduced-motion support.
 
 Not enabled: optional owner administration and inspiration uploads. WhatsApp and office map await verified business destinations.

@@ -16,3 +16,4 @@
 - Submit enquiries through a Zod-validated public server function using an RLS-scoped publishable client; never expose enquiry read access to visitors.
 - Reviews may be submitted publicly but remain private until approved; only approved review content is publicly readable.
 - Use semantic visual tokens from the global stylesheet, and explicitly label generated concept imagery rather than imply completed client work.
+- Keep motion as progressive enhancement in the shared studio motion controller and global CSS; use compositor-friendly animation and respect reduced-motion preferences so content and navigation never depend on animation.

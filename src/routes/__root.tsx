@@ -13,6 +13,7 @@ import { useEffect, type ReactNode } from "react";
 import appCss from "../styles.css?url";
 import { Header, Footer } from "@/components/studio/shell";
 import { PreferencesProvider } from "@/components/studio/preferences";
+import { StudioMotion } from "@/components/studio/motion";
 import { reportLovableError } from "../lib/lovable-error-reporting";
 
 function NotFoundComponent() {
@@ -126,7 +127,7 @@ function RootComponent() {
   return (
     <QueryClientProvider client={queryClient}>
       {/* Required: nested routes render here. Removing <PreferencesProvider><Header /><main id="main-content"><Outlet /></main><Footer /></PreferencesProvider> breaks all child routes. */}
-      <PreferencesProvider><Header /><main id="main-content"><Outlet /></main><Footer /></PreferencesProvider>
+      <PreferencesProvider><StudioMotion /><Header /><main id="main-content"><Outlet /></main><Footer /></PreferencesProvider>
     </QueryClientProvider>
   );
 }

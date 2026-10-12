@@ -14,7 +14,90 @@ export type Database = {
   }
   public: {
     Tables: {
-      [_ in never]: never
+      enquiries: {
+        Row: {
+          budget: string
+          consent: boolean
+          created_at: string
+          email: string
+          full_name: string
+          id: string
+          location: string
+          message: string
+          phone: string
+          preferred_rooms: string[]
+          preferred_styles: string[]
+          project_type: string
+          selected_services: string[]
+          status: string
+          timeline: string
+        }
+        Insert: {
+          budget?: string
+          consent: boolean
+          created_at?: string
+          email?: string
+          full_name: string
+          id?: string
+          location: string
+          message?: string
+          phone: string
+          preferred_rooms?: string[]
+          preferred_styles?: string[]
+          project_type: string
+          selected_services?: string[]
+          status?: string
+          timeline?: string
+        }
+        Update: {
+          budget?: string
+          consent?: boolean
+          created_at?: string
+          email?: string
+          full_name?: string
+          id?: string
+          location?: string
+          message?: string
+          phone?: string
+          preferred_rooms?: string[]
+          preferred_styles?: string[]
+          project_type?: string
+          selected_services?: string[]
+          status?: string
+          timeline?: string
+        }
+        Relationships: []
+      }
+      testimonials: {
+        Row: {
+          approved: boolean
+          client_name: string
+          created_at: string
+          id: string
+          project_type: string
+          rating: number
+          review_text: string
+        }
+        Insert: {
+          approved?: boolean
+          client_name: string
+          created_at?: string
+          id?: string
+          project_type: string
+          rating: number
+          review_text: string
+        }
+        Update: {
+          approved?: boolean
+          client_name?: string
+          created_at?: string
+          id?: string
+          project_type?: string
+          rating?: number
+          review_text?: string
+        }
+        Relationships: []
+      }
     }
     Views: {
       [_ in never]: never

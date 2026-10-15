@@ -24,8 +24,8 @@ let cache: { at: number; data: GoogleReviewsResult } | null = null;
 export const getGoogleReviews = createServerFn({ method: 'GET' }).handler(async (): Promise<GoogleReviewsResult> => {
   if (cache && Date.now() - cache.at < 6 * 60 * 60 * 1000) return cache.data;
   const empty: GoogleReviewsResult = { ok: false, rating: null, total: null, mapsUri: null, reviews: [] };
-  const lovable = process.env.LOVABLE_API_KEY;
-  const maps = process.env.GOOGLE_MAPS_API_KEY;
+  const lovable = process.env['LOVABLE_API_KEY'];
+  const maps = process.env['GOOGLE_MAPS_API_KEY'];
   if (!lovable || !maps) return empty;
   try {
     const res = await fetch(`https://connector-gateway.lovable.dev/google_maps/places/v1/places/${GOOGLE_PLACE_ID}`, {

@@ -6,7 +6,7 @@ import { getGoogleReviews, GOOGLE_PLACE_ID } from '@/lib/google-reviews.function
 
 const MAPS_LINK = 'https://share.google/ZAkv1JNYrcq034ksu';
 const WRITE_LINK = `https://search.google.com/local/writereview?placeid=${GOOGLE_PLACE_ID}`;
-const GOOGLE_LOGO = 'https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg';
+const GOOGLE_LOGO = '/google-logo.svg';
 
 function Stars({ value }: { value: number }) {
   return <span className="g-stars" aria-label={`${value} out of 5 stars`}>{[1, 2, 3, 4, 5].map((i) => <Star key={i} size={15} className={i <= Math.round(value) ? 'on' : ''} />)}</span>;

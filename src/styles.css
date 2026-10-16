@@ -471,3 +471,5 @@ html { scroll-behavior:smooth; scroll-padding-top:110px; }
 .map-note{margin-top:1.5rem;font-size:.75rem;color:var(--muted-foreground)}
 @media (max-width:900px){.map-layout,.region-cards{grid-template-columns:1fr}}
 @media (prefers-reduced-motion:reduce){.pin .pulse{animation:none}.map-card{animation:none}}
+
+.map-head h2{font-size:clamp(2rem,4vw,3.4rem);line-height:1.1}.region-card .image-note{top:1rem;bottom:auto;left:1rem}

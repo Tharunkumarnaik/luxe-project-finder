@@ -20,6 +20,8 @@ export function ProjectMap() {
     return `${minX} ${minY} ${Math.max(w, h)} ${Math.max(w, h)}`;
   }, [visible]);
 
+  const vb = filter === 'All Locations' ? '150 300 330 330' : focus;
+  const k = Number(vb.split(' ')[2]) / 330;
   return (
     <section className="section map-section" aria-labelledby="map-title">
       <div className="container">
@@ -34,13 +36,13 @@ export function ProjectMap() {
         </div>
         <div className="map-layout">
           <div className="map-canvas">
-            <svg viewBox={filter === 'All Locations' ? '150 300 330 330' : focus} role="img" aria-label="Map of South India showing project locations">
+            <svg viewBox={vb} role="img" aria-label="Map of South India showing project locations">
               {indiaStates.map(s => {
                 const f = stateFilter[s.name];
                 return <path key={s.id} d={s.d} className={s.south ? 'state south' : 'state'} data-active={f ? filterLocations(filter).some(l => l.state === s.name) || undefined : undefined} onClick={f ? () => choose(f) : undefined}><title>{s.name}</title></path>;
               })}
               {visible.map(l => { const { x, y } = project(l.lon, l.lat); const on = active?.id === l.id; return (
-                <g key={l.id} className={`pin${l.hub ? ' hub' : ''}${on ? ' on' : ''}`} transform={`translate(${x} ${y})`} tabIndex={0} role="button" aria-label={`${l.city}, ${l.state}`} aria-pressed={on}
+                <g key={l.id} className={`pin${l.hub ? ' hub' : ''}${on ? ' on' : ''}`} transform={`translate(${x} ${y}) scale(${k})`} tabIndex={0} role="button" aria-label={`${l.city}, ${l.state}`} aria-pressed={on}
                   onMouseEnter={() => setActiveId(l.id)} onFocus={() => setActiveId(l.id)} onClick={() => setActiveId(l.id)}>
                   <circle className="pulse" r={l.hub ? 9 : 6} /><circle className="dot" r={l.hub ? 4.5 : 3} />
                   {(l.hub || on) && <text y={-10}>{l.city}</text>}

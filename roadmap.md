@@ -6,6 +6,6 @@
 - [x] Verify navigation, enquiry flow, mobile layout and tests.
 - [ ] Add and verify smooth page entrances, scroll reveals and refined interaction transitions with reduced-motion support.
 
-- [ ] Add five-question interior style quiz, personalized profile and matching design inspiration; verify recommendations and enquiry handoff.
+- [x] Add five-question interior style quiz, personalized profile and matching design inspiration; verify recommendations and enquiry handoff.
 
 Not enabled: optional owner administration and inspiration uploads. WhatsApp and office map await verified business destinations.

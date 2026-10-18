@@ -46,7 +46,8 @@ export function recommendStyle(answers: QuizAnswers) {
   const primary = ranked[0]?.style;
   const alternative = ranked[1]?.style;
   if (!primary || !alternative) throw new Error('No style directions available.');
-  const category = { living: 'Residential', bedroom: 'Bedrooms', kitchen: 'Kitchens', home: 'Residential' }[answers.room];
+  const roomCategories: Record<string, string> = { living: 'Residential', bedroom: 'Bedrooms', kitchen: 'Kitchens', home: 'Residential' };
+  const category = roomCategories[answers.room];
   const matches = projects.map(project => ({ project, score: (project.category === category ? 4 : 0) + (project.style === primary.name ? 3 : project.style === alternative.name ? 2 : 0) }))
     .filter(item => item.score > 0).sort((a, b) => b.score - a.score).slice(0, 2).map(item => item.project);
   return { primary, alternative, matches, chosen };

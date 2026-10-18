@@ -18,3 +18,4 @@
 - Use semantic visual tokens from the global stylesheet, and explicitly label generated concept imagery rather than imply completed client work.
 - Keep motion as progressive enhancement in the shared studio motion controller and global CSS; use compositor-friendly animation and respect reduced-motion preferences so content and navigation never depend on animation.
 - Keep style quiz scoring and inspiration matching in a shared pure module, separate from the reusable quiz UI, so recommendations can be tested and reused across pages.
+- Keep repeated studio cards on shared surface, radius and shadow tokens in the global stylesheet so all public pages stay visually consistent.

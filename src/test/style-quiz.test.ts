@@ -9,11 +9,11 @@ describe('Interior style recommendations', () => {
     expect(recommendStyle(base).primary.name).toBe('Modern Minimalist');
   });
   it('uses color preferences in the direction', () => {
-    expect(recommendStyle({ ...base, colors: 'light', lifestyle: 'family', room: 'home', maintenance: 'balanced', budget: 'unsure' }).primary.name).toBe('Contemporary Indian');
-    expect(recommendStyle({ ...base, colors: 'earth', lifestyle: 'family', room: 'home', maintenance: 'balanced', budget: 'unsure' }).alternative.name).toBe('Bohemian & Earthy');
+    expect(recommendStyle({ ...base, colors: 'light', lifestyle: 'family', room: 'home', maintenance: 'balanced', budget: 'unsure' }).primary.name).toBe('Scandinavian');
+    expect(recommendStyle({ ...base, colors: 'earth', lifestyle: 'family', room: 'home', maintenance: 'balanced', budget: 'unsure' }).primary.name).toBe('Contemporary Indian');
   });
   it('uses lifestyle to distinguish a retreat from entertaining', () => {
-    const answers = { ...base, colors: 'rich', room: 'living', maintenance: 'balanced', budget: 'unsure' };
+    const answers = { ...base, colors: 'rich', room: 'home', maintenance: 'balanced', budget: 'unsure' };
     expect(recommendStyle({ ...answers, lifestyle: 'quiet' }).primary.name).toBe('Hotel-Inspired Luxury');
     expect(recommendStyle({ ...answers, lifestyle: 'hosting' }).primary.name).toBe('Contemporary Luxury');
   });

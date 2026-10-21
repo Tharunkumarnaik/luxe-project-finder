@@ -14,7 +14,7 @@ export function StoryScroll(){
   const refs=useRef<(HTMLDivElement|null)[]>([]);
   useEffect(()=>{
     if(!('IntersectionObserver' in window))return;
-    const io=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting)setActive(Number((e.target as HTMLElement).dataset.index));}),{rootMargin:'-45% 0px -45% 0px'});
+    const io=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting)setActive(Number((e.target as HTMLElement).dataset['index']));}),{rootMargin:'-45% 0px -45% 0px'});
     refs.current.forEach(el=>el&&io.observe(el));
     return()=>io.disconnect();
   },[]);

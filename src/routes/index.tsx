@@ -4,7 +4,7 @@ import {createFileRoute,Link} from '@tanstack/react-router';
 import {ArrowUpRight} from 'lucide-react';
 import {Button} from '@/components/ui/button';
 import {images,pageHead,styles} from '@/lib/studio-data';
-import {Stats,SectionHeading,ServiceCards,TextLink,Process,FAQ} from '@/components/studio/common';
+import {Stats,CoreServices,SectionHeading,ServiceCards,TextLink,Process,FAQ} from '@/components/studio/common';
 import {ProjectGallery} from '@/components/studio/gallery';
 import {usePreferences} from '@/components/studio/preferences';
 import {StoryScroll,useHeroParallax} from '@/components/studio/story';

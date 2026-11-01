@@ -581,8 +581,8 @@ html { scroll-behavior:smooth; scroll-padding-top:110px; }
 }
 
 /* Apple-inspired refinement */
-.site-header { background: color-mix(in oklab, var(--ink) 72%, transparent); backdrop-filter: blur(20px) saturate(160%); transition: box-shadow .4s ease, background .4s ease; }
-.site-header.scrolled { background: color-mix(in oklab, var(--ink) 88%, transparent); }
+.site-header { background: var(--ink); transition: box-shadow .4s ease, background .4s ease; }
+.site-header.scrolled { background: var(--ink); }
 .hero { height: min(860px, calc(100svh - 80px)); }
 .hero-image { will-change: transform; transform: scale(1.06); }
 .hero-inner { will-change: transform, opacity; }

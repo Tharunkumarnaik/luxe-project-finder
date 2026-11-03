@@ -630,3 +630,48 @@ html { scroll-behavior:smooth; scroll-padding-top:110px; }
   .story-visual img, .story-step { transition: none; }
   .story-step { opacity: 1; transform: none; }
 }
+
+/* Bento grid treatment across card collections */
+@media (min-width: 1024px) {
+  /* Services: featured first tile, then a flowing mix */
+  .service-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 22px; }
+  .service-card:nth-child(6n+1) { grid-column: span 2; }
+  .service-card:nth-child(6n+1) .image-frame { aspect-ratio: 2.05; }
+  .service-card:nth-child(6n+4) { grid-column: span 2; }
+  .service-card:nth-child(6n+4) .image-frame { aspect-ratio: 2.05; }
+
+  /* Design styles: large lead tile, companion tiles around it */
+  .style-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 22px; }
+  .style-card:nth-child(8n+1) { grid-column: span 2; grid-row: span 2; }
+  .style-card:nth-child(8n+1) .image-frame { aspect-ratio: auto; flex: 1; min-height: 320px; }
+  .style-card:nth-child(8n+6) { grid-column: span 2; }
+  .style-card:nth-child(8n+6) .image-frame { aspect-ratio: 2.1; }
+
+  /* Projects: alternating editorial rhythm */
+  .project-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 26px; }
+  .project-card:nth-child(4n+1) { grid-column: span 2; }
+  .project-card:nth-child(4n+1) .image-frame { aspect-ratio: 2.4; }
+  .project-card:nth-child(4n+4) { grid-column: span 2; }
+  .project-card:nth-child(4n+4) .image-frame { aspect-ratio: 2.4; }
+
+  /* Process: five steps as an asymmetric bento */
+  .process-grid { grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 18px; }
+  .process-grid > div { display: flex; flex-direction: column; }
+  .process-grid > div:nth-child(1) { grid-column: span 3; }
+  .process-grid > div:nth-child(2) { grid-column: span 3; }
+  .process-grid > div:nth-child(3) { grid-column: span 2; }
+  .process-grid > div:nth-child(4) { grid-column: span 2; }
+  .process-grid > div:nth-child(5) { grid-column: span 2; }
+  .process-grid > div:nth-child(1) span, .process-grid > div:nth-child(2) span { font-size: 44px; }
+  .process-grid > div:nth-child(1) h3, .process-grid > div:nth-child(2) h3 { font-size: 22px; }
+}
+@media (max-width: 1023px) and (min-width: 768px) {
+  .service-card:nth-child(odd) { grid-column: span 2; }
+  .service-card:nth-child(odd) .image-frame { aspect-ratio: 2.05; }
+  .style-card:nth-child(4n+1) { grid-column: span 2; }
+  .style-card:nth-child(4n+1) .image-frame { aspect-ratio: 2.05; }
+  .project-card:nth-child(odd) { grid-column: span 2; }
+  .project-card:nth-child(odd) .image-frame { aspect-ratio: 2.2; }
+  .process-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .process-grid > div:first-child { grid-column: span 2; }
+}

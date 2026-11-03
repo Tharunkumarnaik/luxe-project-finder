@@ -70,8 +70,8 @@
   --ink: #393632;
   --charcoal: #393632;
   --navy: #8B8178;
-  --beige: #D8C9B5;
-  --on-ink: #F7F5F0;
+  --beige: #FFFFFF;
+  --on-ink: #FFFFFF;
   --bronze: #8B8178;
   --hero-shade: linear-gradient(90deg, oklch(0.16 0.009 70 / 76%), oklch(0.16 0.009 70 / 22%) 75%);
   --shadow-header: 0 2px 16px oklch(0.25 0.01 80 / 6%);
@@ -80,24 +80,24 @@
   --shadow-card: 0 4px 18px oklch(0.25 0.01 80 / 5%);
   --shadow-card-raised: 0 14px 32px oklch(0.25 0.01 80 / 10%);
   --review-star: oklch(0.82 0.16 85);
-  --background: #F7F5F0;
+  --background: #FFFFFF;
   --foreground: #393632;
-  --card: #FDFBF6;
+  --card: #FFFFFF;
   --card-foreground: var(--foreground);
   --popover: oklch(1 0 0);
   --popover-foreground: #393632;
   --primary: #393632;
-  --primary-foreground: #F7F5F0;
-  --secondary: #D8C9B5;
+  --primary-foreground: #FFFFFF;
+  --secondary: #FFFFFF;
   --secondary-foreground: #393632;
-  --muted: #D8C9B5;
-  --muted-foreground: #6E675F;
-  --accent: #D8C9B5;
+  --muted: #F1F0EE;
+  --muted-foreground: #6E6B66;
+  --accent: #F1F0EE;
   --accent-foreground: #393632;
   --destructive: oklch(0.577 0.245 27.325);
   --destructive-foreground: oklch(0.984 0.003 247.858);
-  --border: #CDBFA9;
-  --input: #CDBFA9;
+  --border: #E4E2DF;
+  --input: #E4E2DF;
   --ring: #8B8178;
   --chart-1: oklch(0.646 0.222 41.116);
   --chart-2: oklch(0.6 0.118 184.704);
@@ -170,7 +170,7 @@
   button,input,select,textarea { font: inherit; }
   button,a,input,select,textarea { -webkit-tap-highlight-color: transparent; }
   * { letter-spacing: 0; }
-  ::selection { background: var(--secondary); color: var(--foreground); }
+  ::selection { background: var(--primary); color: #FFFFFF; }
 }
 .container { width: min(1280px, calc(100% - 112px)); margin: 0 auto; }
 .site-header { background: var(--ink); color: var(--on-ink); position: sticky; top:0; z-index:40; box-shadow:0 2px 16px oklch(0.16 0.009 70 / 28%); }
@@ -515,8 +515,8 @@ html { scroll-behavior:smooth; scroll-padding-top:110px; }
 .map-layout{display:grid;grid-template-columns:minmax(0,1.6fr) minmax(0,1fr);gap:2rem;align-items:start}
 .map-canvas{background:var(--card);border:1px solid var(--border);box-shadow:0 30px 60px -40px color-mix(in oklab,var(--foreground) 35%,transparent);aspect-ratio:1}
 .map-canvas svg{width:100%;height:100%;display:block;transition:all .6s}
-.state{fill:var(--accent);stroke:var(--card);stroke-width:.6;opacity:.45;transition:fill .5s,opacity .5s}
-.state.south{opacity:1;cursor:pointer}.state.south:hover,.state[data-active]{fill:color-mix(in oklab,var(--primary) 40%,var(--accent))}
+.state{fill:var(--navy);stroke:var(--card);stroke-width:.6;opacity:.28;transition:fill .5s,opacity .5s}
+.state.south{opacity:.75;cursor:pointer}.state.south:hover,.state[data-active]{fill:var(--primary);opacity:1}
 .pin{cursor:pointer;outline:none}.pin .dot{fill:var(--foreground);stroke:var(--card);stroke-width:1.2;transition:fill .3s}
 .pin.hub .dot,.pin.on .dot,.pin:focus-visible .dot{fill:var(--primary)}
 .pin .pulse{fill:var(--primary);opacity:.35;transform-box:fill-box;transform-origin:center;animation:pin-pulse 2.4s ease-out infinite}

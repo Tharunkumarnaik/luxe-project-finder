@@ -8,5 +8,6 @@
 
 - [x] Add five-question interior style quiz, personalized profile and matching design inspiration; verify recommendations and enquiry handoff.
 - [ ] Refresh overall styling and modern cards; verify layouts and existing interactions.
+- [ ] Restyle core services showcase (Architecture, Interiors, Construction) into a bento grid layout; verify desktop and mobile.
 
 Not enabled: optional owner administration and inspiration uploads. WhatsApp and office map await verified business destinations.

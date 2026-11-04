@@ -453,9 +453,6 @@ html { scroll-behavior:smooth; scroll-padding-top:110px; }
 .service-card:hover .service-card-content>svg,
 .hero-actions>a:hover svg, .header-cta:hover svg { transform:translate(3px,-3px); }
 [data-slot="button"] { transition:background-color var(--motion-quick) ease, color var(--motion-quick) ease, border-color var(--motion-quick) ease, opacity var(--motion-quick) ease; }
-.desktop-nav a { transition:color var(--motion-quick) ease; }
-.desktop-nav a::after { width:100%; transform:scaleX(0); transform-origin:left; transition:transform 400ms var(--ease-studio); }
-.desktop-nav a:hover::after, .desktop-nav a.active::after { transform:scaleX(1); }
 .filter-row .filter, .style-card { transition:color 300ms ease, border-color 300ms ease; }
 .enquiry-form input, .enquiry-form select, .enquiry-form textarea,
 .review-form input, .review-form textarea { transition:border-color 250ms ease; }

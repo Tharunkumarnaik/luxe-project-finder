@@ -619,9 +619,7 @@ html { scroll-behavior:smooth; scroll-padding-top:110px; }
 }
 
 /* Apple-inspired refinement */
-.site-header { background: var(--ink); transition: box-shadow .4s ease, background .4s ease; }
-.site-header.scrolled { background: var(--ink); }
-.hero { height: min(860px, calc(100svh - 80px)); }
+.hero { height: min(860px, 100svh); }
 .hero-image { will-change: transform; transform: scale(1.06); }
 .hero-inner { will-change: transform, opacity; }
 .hero h1 { font-size: clamp(44px, 7.4vw, 104px); line-height: 1.02; letter-spacing: -0.03em; }

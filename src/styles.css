@@ -649,6 +649,7 @@ html { scroll-behavior:smooth; scroll-padding-top:110px; }
 @media (prefers-reduced-motion: reduce) {
   .story-visual img, .story-step { transition: none; }
   .story-step { opacity: 1; transform: none; }
+  .menu-overlay, .menu-panel, .menu-close, .menu-nav a, .float-toggle span { transition-duration: 1ms; transition-delay: 0ms !important; }
 }
 
 /* Bento grid treatment across card collections */

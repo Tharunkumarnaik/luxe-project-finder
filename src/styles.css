@@ -554,7 +554,7 @@ html { scroll-behavior:smooth; scroll-padding-top:110px; }
 .region-card>div{padding:1.25rem}.region-card p{color:var(--muted-foreground);font-size:.9rem}
 .region-card[aria-pressed=true]{border-color:var(--primary);box-shadow:0 20px 40px -30px var(--primary)}
 .map-note{margin-top:1.5rem;font-size:.75rem;color:var(--muted-foreground)}
-@media (max-width:900px){.map-layout,.region-cards{grid-template-columns:1fr}}
+@media (max-width:900px){.map-layout,.region-cards{grid-template-columns:minmax(0,1fr)}}
 @media (prefers-reduced-motion:reduce){.pin .pulse{animation:none}.map-card{animation:none}}
 
 .map-head h2{font-size:40px;line-height:1.2}.region-card .image-note{top:1rem;bottom:auto;left:1rem}

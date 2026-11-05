@@ -730,3 +730,14 @@ html { scroll-behavior:smooth; scroll-padding-top:110px; }
 .fc-card img { max-width:none; }
 .fc-track { scroll-padding-inline:max(20px, calc((100vw - 1200px) / 2)); }
 .fc-card img { position:absolute; left:0; right:0; bottom:0; width:100% !important; height:56%; margin:0 !important; }
+
+/* Unified Apple-style card language across all components */
+:root { --radius-card: 28px; --surface-soft: #F5F5F7; --shadow-card: 0 4px 18px -8px oklch(0 0 0 / 12%); --shadow-card-raised: 0 18px 40px -14px oklch(0 0 0 / 22%); }
+.card, [data-slot="card"], .process-grid>div, .quiz-option, .g-card, .service-card, .style-card, .project-card, .review-card, .faq-item, .contact-card, .stat-card {
+  border-radius: var(--radius-card) !important; border-color: transparent !important; background-color: var(--surface-soft);
+  box-shadow: var(--shadow-card); transition: transform 450ms var(--ease-studio, ease), box-shadow 450ms var(--ease-studio, ease);
+}
+.process-grid>div:hover, .g-card:hover, .service-card:hover, .style-card:hover, .project-card:hover { transform: scale(1.015); box-shadow: var(--shadow-card-raised); }
+.quiz-option[aria-pressed="true"], .quiz-option[data-state="on"] { background: var(--foreground); color: var(--background); }
+input, textarea, select, [data-slot="input"], [data-slot="textarea"], [data-slot="select-trigger"] { border-radius: 14px !important; }
+.btn, [data-slot="button"] { border-radius: 999px; }

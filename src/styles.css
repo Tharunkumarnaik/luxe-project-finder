@@ -729,3 +729,4 @@ html { scroll-behavior:smooth; scroll-padding-top:110px; }
 @media(prefers-reduced-motion:reduce) { .fc-track { scroll-behavior:auto; } .fc-card, .fc-modal, .fc-modal-panel { transition:none; animation:none; } }
 .fc-card img { max-width:none; }
 .fc-track { scroll-padding-inline:max(20px, calc((100vw - 1200px) / 2)); }
+.fc-card img { position:absolute; left:0; right:0; bottom:0; width:100% !important; height:56%; margin:0 !important; }

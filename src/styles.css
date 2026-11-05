@@ -727,3 +727,5 @@ html { scroll-behavior:smooth; scroll-padding-top:110px; }
 @media(max-width:1023px) { .fc-card { flex-basis:calc((100vw - 60px) / 2); height:500px; } }
 @media(max-width:767px) { .fc-card { flex-basis:82vw; height:440px; padding:26px 22px; } .fc-card h3 { font-size:22px; } .fc-card img { width:calc(100% + 44px); margin-left:-22px; margin-bottom:-26px; } .fc-modal-panel { padding:40px 24px; } }
 @media(prefers-reduced-motion:reduce) { .fc-track { scroll-behavior:auto; } .fc-card, .fc-modal, .fc-modal-panel { transition:none; animation:none; } }
+.fc-card img { max-width:none; }
+.fc-track { scroll-padding-inline:max(20px, calc((100vw - 1200px) / 2)); }

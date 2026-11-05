@@ -694,3 +694,6 @@ html { scroll-behavior:smooth; scroll-padding-top:110px; }
   .process-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .process-grid > div:first-child { grid-column: span 2; }
 }
+
+/* Square floating nav and menu */
+.float-nav, .float-toggle, .menu-panel, .menu-close, .menu-cta { border-radius:0 !important; }
